@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public interface IVehicle {
 
@@ -7,7 +8,7 @@ public interface IVehicle {
 
     double getPrice();
 
-    String[] getFeatures();
+    ArrayList<String> getFeatures();
 
     void addFeature(String feature);
 
