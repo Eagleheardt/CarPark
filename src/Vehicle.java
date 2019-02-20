@@ -7,6 +7,9 @@ abstract class Vehicle implements IVehicle{
 	protected double _price;
 	protected ArrayList<String> _features;
 	
+	protected int _modelYear;
+	protected String _make;
+	protected String _model;
 	
     public int getNumberOfWheels() {
     	return this._numberOfWheels;
@@ -27,16 +30,30 @@ abstract class Vehicle implements IVehicle{
     public void addFeature(String feature) {
     	this._features.add(feature);
     }
+    
+    public int getYear() {
+    	return this._modelYear;
+    }
+    
+    public String carMake() {
+    	return this._make;
+    }
+    
+    public String carModel() {
+    	return this._model;
+    }
 
     public void testDrive() {
-    	System.out.print("**slaps roof**");
-    	System.out.print("This baby right here has:");
+    	System.out.print("**slaps roof**\n");
+    	String drive = "This is a " + this._make + " " + this._model + "\n";
+    	System.out.print(drive);
+    	System.out.print("This baby right here has:\n");
     	
     	for (String s : this._features) {
-    		System.out.print(s);
+    		System.out.print(s + "\n");
     	}
     	
-    	System.out.print("");
+    	System.out.print("\n");
     }
 
 }
