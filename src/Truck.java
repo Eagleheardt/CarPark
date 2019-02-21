@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Truck extends Vehicle{
 	
 	public Truck(){
+		super._typeOfVehicle = "truck";
+		
 		super._modelYear = 0;
 		super._make = "no make";
 		super._model = "no model";
@@ -15,6 +17,8 @@ public class Truck extends Vehicle{
 	}
 	
 	public Truck(int year, String make, String model, int numWheels, ArrayList<String> features, double cost, int seats){
+		super._typeOfVehicle = "truck";
+		
 		super._modelYear = year;
 		super._make = make;
 		super._model = model;
